@@ -4,7 +4,7 @@ import PokeSearch from './PokeSearch';
 function App() {
   return (
     <div>
-      <p>hey</p>
+      <p>Find Your Pokemon!</p>
       <PokeSearch />
     </div>
   );
