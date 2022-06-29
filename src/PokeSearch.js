@@ -16,19 +16,26 @@ export default function PokeSearch() {
     setPokemon(data.results);
   }
 
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    await fetchAndStorePokemon();
+    setPokemonQuery('');
+  }
+
   return (
     <div>
       <div className="pokemon-search">
-        <form>
+        <form onClick={handleSubmit}>
           <input onChange={(e) => setPokemonQuery(e.target.value)} />
           <button>Search</button>
         </form>
-        {pokemon.map((poke, i) => 
+        {pokemon.map((poke, i) => (
           <div key={poke.pokemon + i} className="pokemon">
             <p>{poke.pokemon}</p>
             <img src={poke.url_image} />
           </div>
-        )}
+        ))}
       </div>
     </div>
   );
