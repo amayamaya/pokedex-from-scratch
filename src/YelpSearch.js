@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { getYelp } from './fetch-utils';
+import { getYelp } from './services/fetch-utils';
 
 export default function YelpSearch() {
   const [businesses, setBusinesses] = useState([]);

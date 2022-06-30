@@ -1,6 +1,6 @@
 import './App.css';
 import PokeSearch from './PokeSearch';
-import YelpSearch from './services/YelpSearch';
+import YelpSearch from './YelpSearch';
 
 function App() {
   return (
